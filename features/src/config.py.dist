@@ -1,0 +1,31 @@
+"""
+Create a copy of this file using
+$ cp features/src/config.py{.dist,}
+"""
+
+# Hostname of the application being tested
+TWITTER_HOST = 'http://twitter.com/'
+
+# Absolute path of the current project
+## Your Local WORKDIR
+PATH = '<your_path>/little-monkey'
+## Chromedriver path
+## Example: '~/.virtualenvs/little-monkey-lettuce/chromedriver-Linux64'
+CHROMEDRIVER = '<your_chromedriverpath>'
+# User catalog. Create users as needed. This will be used in feature files to
+# ensure some user is logged in.
+# Example on how to use it in the fearure file: Given I am logged in as "admin"
+USERS = {
+    'me': {
+        'username': 'your@email.com',
+        'password': 'your_pass'
+    },
+    'invalid' : {
+        'username': 'your@email.com',
+        'password': 'wrong_pass'
+    }
+}
+
+# Choose a browser to perform yours testes with.
+# Available browsers: phantomjs, chrome, chrome_headless, firefox
+BROWSER = 'chrome'
