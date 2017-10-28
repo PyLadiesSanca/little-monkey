@@ -1,11 +1,11 @@
 Feature: Bora tweetá
 
     Scenario: Twitter hacker
-        Given I am logged in as "fake-leticia"
+        Given I am logged in as "invalid"
         Then I should see the message "The email and password you entered did not match our records. Please double-check and try again."
     
     Scenario: Tweet like a crazy teenager
-        Given I am logged in as "leticia"
+        Given I am logged in as "me"
         When I write the tweet "Restart não presta mais porque eu cheguei aqui 8 horas da manhã e eles não vieram falar com a gente. Não, eu não vou perdoar. Eu vou xingar no twitter hoje, muito. Sério."
         Then I should not be able to submit the tweet
 
