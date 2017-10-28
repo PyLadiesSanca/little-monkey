@@ -32,9 +32,23 @@ Se você não tem ainda instalado os pacotes de desenvolvimento, instale-os agor
 
     $ sudo apt-get install -y build-essential python-dev
 
-Instalando dependências (selenium, lettuce, chromedriver) do projeto usando o pip:
+Instalando dependências (selenium, lettuce) do projeto usando o pip:
 
     $ pip install -r requirements.txt
+
+### Instalando o chromedriver ###
+
+O chormedriver permite enviar comandos do python para o google chrome.
+
+###### Obs: Para ter suporte ao chrome headless é necessário que a versão do chromedriver seja superior a 2.3. No pip o chromedriver esta desatualizado e portanto não é recomendável instalar por lá
+
+Baixe o [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) e coloque-o no PATH:
+
+    # Exemplo de código para colocar o chormedriver dentro do PATH do seu ambiente virtual
+    $ wget https://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip -O temp.zip \
+    && unzip temp.zip \
+    && rm -f temp.zip \
+    && mv chromedriver venv/bin/
 
 Executando os testes
 --------------------
